@@ -1,0 +1,39 @@
+section#main
+	#pomodoro
+		h2 NCODE
+		#clock-face
+			#ticker
+				h1 Session
+				h1#timer.off ${ taskM } : ${ taskS}
+				h2#break.off Break time! ${ breakM } : ${ breakS }
+			#checks
+				h3 Pomodoros
+				ul
+					li.check
+					li.check
+					li.check
+					li.check
+		#sliders
+			div
+				h2 ${ time }
+				p.label Session length
+				input type="range" min ="1" max="55" v-model="this.time" v-on:change="setTimeLapse(this.time)"
+			div
+				h2 ${ pause }
+				p.label Break length
+				input type="range" min ="1" max="30" v-model="this.pause" v-on:change="setPause(this.pause)" 
+		#controls
+			ul
+				li
+					button v-on:click="start()"
+					p.label
+						|Start
+				li
+					button v-on:click="stop()"
+					p.label
+						|Pause
+				li
+					button v-on:click="reset()"
+					p.label
+						|Reset
+		

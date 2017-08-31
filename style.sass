@@ -1,0 +1,105 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Audiowide')
+$display: "Audiowide", sans-serif
+//Palette http://www.colourlovers.com/palette/4524429/zolotun_grey
+$screen: #393939
+$numerals: #FF9900 
+$back: #C3C3C3
+$body: #222
+$rim: #6E6E6E
+$label: #6F6F6F
+$button: #FF9900
+
+html, body
+	background-color: $back
+#main
+	width: 100%
+	height: 85vh
+	position: relative
+	#pomodoro
+		position: absolute
+		min-width: 28em
+		max-width: 28em
+		top: 5%
+		left: 33%
+		right: 33%
+		text-align: center
+		background-color: $body
+		border-radius: 5%
+		border-right: 5px solid #111
+		border-bottom: 5px solid #111
+		font-family: $display
+		.label
+			color: $label
+			text-transform: uppercase
+			font-variant: small-caps
+		#clock-face
+			background-color: $screen
+			border: 10px solid $rim
+			border-radius: 5%
+			color: $numerals
+			padding: 2%
+			font-family: $display
+			margin: 2%
+			#ticker
+				color: $numerals
+				h1
+					margin: 0 0
+				#timer
+					font-size: 5em
+					&.off
+						color: rgba($numerals, 0.2)
+				#break
+					&.off
+						color: rgba($numerals, 0.2)
+			#checks
+				h3
+					margin: 0 0
+				ul
+					list-style: none
+					display: inline-flex
+					width: 33%
+					padding: 0 0
+					li
+						width: 25%
+						margin: 0 10%
+						height: 25px
+						background-color: rgba($numerals, 0.2)
+						&.active
+							background-color: rgba($numerals, 1)
+						
+		#sliders
+			width: 100%
+			display: inline-flex
+			div
+				text-align: center
+				width: 50%
+				h2
+					background-color: $screen
+					color: $numerals
+					width: 2em
+					height: 2em
+					font-size: 2em
+					text-align: center
+					border: 5px solid $rim
+					border-radius: 5%
+					margin: 0.3em auto
+		#controls
+			width: 100%
+			ul
+				list-style: none
+				padding: 0
+				text-align: center
+				display: inline-flex
+				width: 50%
+				li
+					width: 33%
+			button
+				background: $button
+				border-radius: 15%
+				border-top: 3px solid #FF9C6B
+				border-left: 3px solid #FF9C6B
+				border-bottom: 3px solid #CC4807 
+				border-right: 3px solid #CC4807
+				height: 1em
+				width: 2em
